@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  
   resources :recipes
+
   devise_for :users, skip: [:sessions]
   devise_scope :user do
     get 'signin', to: 'devise/sessions#new', as: :new_user_session
@@ -7,7 +10,5 @@ Rails.application.routes.draw do
     delete 'signout', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'recipe_food/new'
+  get 'recipe_food/create'
 
   root "recipes#index"
   

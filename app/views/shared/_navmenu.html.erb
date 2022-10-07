@@ -1,10 +1,11 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid ">
-    <div class="d-flex space-between">
-      <a class="navbar-brand" href="#">Home</a>
-      <a class="navbar-brand" href="#">Public Recipe</a>
-      <a class="navbar-brand" href="#">Food List</a>
+    <div class="d-flex space-between">      
+      <%= link_to 'Home', recipes_path, class: "navbar-brand" %> <span>|</span> 
+      <%= link_to 'My Recipes', recipes_path, class: "navbar-brand" %> <span>|</span>
+      <%= link_to 'Public Recipes', public_recipes_path, class: "navbar-brand" %> <span>|</span>
+      <%= link_to 'Food List', foods_path, class: "navbar-brand" %>
     </div>    
-    <a class="navbar-brand text-center" href="#">Logout</a> 
+    <%= link_to 'Logout', destroy_session_path(:user), class: "navbar-brand text-center" %>
   </div>
 </nav>

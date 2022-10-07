@@ -2,9 +2,10 @@
 <h1><%= recipe.name %></h1>
 
 <div class="prep_time_public" >
-  <p>
-    Preparation time: <%= recipe.preparation_time %>
-  </p>
+  <div>
+    <span class="h5 mb-4">Preparation time:</span> 
+    <span> <%= recipe.preparation_time %></span>  
+  </div>  
   <div>
     <label for="toggle-public">Public</label>
     <input type="checkbox" id="toggle-public" <%= recipe.public ? "checked" : "" %> >
@@ -12,15 +13,16 @@
 </div>
 
 <div>
-  <p>Cooking time: <%= recipe.cooking_time %> </p>
+  <span class="h5 mb-4">Cooking time: </span>
+  <span><%= recipe.cooking_time %> </span>
 </div>
 
-<div>
-  <h3>Description</h3>
-  <p><%= recipe.description %></p>
+<div class="">
+  <span class="h5 mb-4">Description</span>
+  <p class=""><%= recipe.description %></p>
 </div>
 
-<div>
+<div class="d-flex justify-content-between" >
   <%=  button_to "Generate shopping list" %>
   <%=  button_to "Add ingredient" %>
 </div>

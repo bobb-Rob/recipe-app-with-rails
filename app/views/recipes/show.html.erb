@@ -1,7 +1,6 @@
-<div class="recipe-details d-flex flex-column">
-  <%= render "recipe_details", recipe: @recipe %>
-
   <div>  
-    <%= link_to "Back to recipes", recipes_path %> 
+    <%= link_to "Back", recipes_path, class: "btn light-green text-white rounded-50" %> 
   </div>
-</div>
+  <%= render "recipe_details", recipe: @recipe %>
+  
+

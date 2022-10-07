@@ -5,6 +5,7 @@
       <%= link_to 'My Recipes', recipes_path, class: "navbar-brand" %> <span>|</span>
       <%= link_to 'Public Recipes', public_recipes_path, class: "navbar-brand" %> <span>|</span>
       <%= link_to 'Food List', foods_path, class: "navbar-brand" %>
+      <%= link_to 'New Recipe', new_recipe_path, class: "btn light-green text-white" %>
     </div>    
     <%= link_to 'Logout', destroy_session_path(:user), class: "navbar-brand text-center" %>
   </div>

@@ -27,7 +27,6 @@
   flex-direction: column;
   width: 100%;
 }
-
 .form-group > input[type="text"] { 
   padding: 0.5rem;
   border: 1px solid #e6e6e6;

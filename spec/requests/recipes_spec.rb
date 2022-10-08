@@ -1,18 +1,18 @@
 require 'rails_helper'
 
-RSpec.describe '/recipes', type: :request do  
+RSpec.describe '/recipes', type: :request do
   context 'GET /index' do
     before(:each) do
       get '/recipes'
     end
-    
+
     it 'Correct template was rendered.' do
       expect(response).to render_template(:index)
     end
 
     it 'Response status was correct.' do
       expect(response).to have_http_status(:ok)
-    end    
+    end
   end
 
   # describe 'GET /show' do
@@ -32,7 +32,7 @@ RSpec.describe '/recipes', type: :request do
   #   end
   #   it 'Response status was correct.' do
   #     expect(response).to have_http_status(:ok)
-  #   end    
+  #   end
   # end
 
   # describe 'GET /new' do
@@ -69,19 +69,19 @@ RSpec.describe '/recipes', type: :request do
   #     end
   #   end
   # end
-  
+
   # describe 'DELETE /destroy' do
   #   before(:each) do
   #     recipe = Recipe.create! valid_attributes
   #   end
 
-  #   it 'destroys the requested recipe' do      
+  #   it 'destroys the requested recipe' do
   #     expect do
   #       delete recipe_url(recipe)
   #     end.to change(Recipe, :count).by(-1)
   #   end
 
-  #   it 'redirects to the recipes list' do      
+  #   it 'redirects to the recipes list' do
   #     delete recipe_url(recipe)
   #     expect(response).to redirect_to(recipes_url)
   #   end

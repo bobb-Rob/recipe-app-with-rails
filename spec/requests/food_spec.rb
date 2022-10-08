@@ -5,19 +5,18 @@ RSpec.describe 'Foods', type: :request do
   @user.sign_in_count = 1
   @user.save
 
-  
-  context 'GET /index' do  
+  context 'GET /index' do
     before(:each) do
       get '/foods'
     end
-    
-    it 'returns http success' do      
+
+    it 'returns http success' do
       expect(response).to have_http_status(:ok)
     end
 
     it 'Correct template was rendered.' do
       expect(response).to render_template(:index)
-    end      
+    end
   end
 
   context 'GET /new' do

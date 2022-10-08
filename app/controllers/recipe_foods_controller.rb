@@ -13,9 +13,7 @@ class RecipeFoodsController < ApplicationController
     redirect_to recipe_path(params[:recipe_id])
   end
 
-  def edit    
-  end
+  def edit; end
 
-  def destroy
-  end  
+  def destroy; end
 end

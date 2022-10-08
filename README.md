@@ -8,53 +8,74 @@
 ## Built With
 
 - Ruby on Rails
+- Postgresql
+- Bootstap
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
 
-## Getting Started
+## Install & Setup
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+### To setup and install this sample AlFa Blog project, follow the below steps:
+
+- Clone this project by the command:
+
+`git clone git@github.com:bobb-Rob/recipe-app-with-rails.git`
+
+- Then switch to the project folder by the bellow query:
+
+`cd recipe-app`
+
+-Install the required dependecies with:
+
+`bundle install`
+
+-Install npm dependencies with:
+
+`npm install`
+
+- Before running below commands update config/database.yml with your local DBcredentials. Then run:
+
+`rake db:create`
+
+`rake db:migrate`
 
 
-To get a local copy up and running follow these simple example steps.
+- To make the tailwindcss works run the below command:
+    `bundle exec rake assets:precompile`
 
-### Prerequisites
 
-### Setup
+- With Ruby on Rails and PostgreSQL installed in your environment, you can run rails server to run the website.
 
-### Install
-
-### Usage
 
 ### Run tests
 
-### Deployment
+- Run bundle install
+- Run bundle exec rspec spec
 
+### Prerequisites
 
+- IDE to edit and run the code (We use Visual Studio Code 🔥).
+- Git to versionning your work.
+- Postgresql
 
 ## Authors
 
-👤 **Author1**
+👤 **Maen Al-khraisha**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/maen1980)
+- Twitter: [@twitterhandle](https://twitter.com/AlkhryshaM)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ma-en-mohammad-303930100/)
 
-👤 **Author2**
+👤 **Robertson Akpan**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](@bobb-rob)
+- Twitter: [@twitterhandle](@___Robertson)
+- LinkedIn: [LinkedIn](@RobertsonAkpan)
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 

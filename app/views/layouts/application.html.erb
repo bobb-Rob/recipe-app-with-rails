@@ -15,13 +15,18 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body>   
+   <%unless current_user.blank? -%>
+      <%= render partial: 'shared/navmenu' %>      
+  <%end-%>
+
+
+  <%# <%= render "shared/flash" %> 
 
    <%= render partial: 'shared/navbar' %>
+
   
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <main class="main-container">
+  <main class="main-container">    
     <%= yield %>
   </main>    
   </body>

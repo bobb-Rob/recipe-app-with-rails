@@ -1,7 +1,7 @@
 class RecipeFoodsController < ApplicationController
   def new
     @recipe_food = RecipeFood.new
-    @foods = current_user.foods    
+    @foods = current_user.foods
   end
 
   def create
@@ -19,6 +19,7 @@ class RecipeFoodsController < ApplicationController
   def destroy; end
 
   private
+
   def recipe_food_params
     params.require(:recipe_food).permit(:food_id, :recipe_id, :quantity)
   end

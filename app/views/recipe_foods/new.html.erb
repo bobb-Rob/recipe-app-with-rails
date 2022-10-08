@@ -8,12 +8,12 @@
   </thead>
   <tbody>
       <% @foods.each do |food| %> 
-        <%= form_with model: @recipe_food ,url: recipe_recipe_foods_path, method: :post do |f| %>
+        <%= form_for :recipe_food , url: recipe_recipe_foods_path, method: :post do |f| %>
           <tr>
             <td>
               <%= food.name %>
-              <% f.number_field :food_id, value: food.id %>
-              <% f.number_field :recipe_id, value: params[:recipe_id] %>
+              <%= f.number_field :food_id, value: food.id %>
+              <%= f.number_field :recipe_id, value: params[:recipe_id] %>
             </td>          
             <td>
               <%= f.number_field :quantity, class: "rounded-2 border-warning" %>              

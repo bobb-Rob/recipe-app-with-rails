@@ -1,0 +1,30 @@
+<table class="table shadow w-50 m-5">
+  <thead>
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Quantity</th>      
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <% @foods.each do |food| %> 
+      <tr>
+      
+        <%= form_with url: recipe_recipe_foods_path do |form| %>
+
+          <td>
+            <%= food.name%>
+          </td>
+          <td>
+            <%= hidden_field_tag :food_id, food.id %>
+            <%= form.text_field :quantity ,  class: 'form-control'%>
+          </td>
+          <td>
+            <%= form.submit 'Add', :class => "btn btn-success" %>
+          </td>
+          
+        <% end %>
+      
+    </tr>
+      <% end %>      

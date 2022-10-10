@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :foods, only: [:index, :new, :create, :destroy ]
   resources :shopping_lists, only: [:index ]
   
-
   get 'public_recipes', to: 'recipes#public_recipes'
   
   devise_for :users
